@@ -71,6 +71,7 @@ DecoupledEditor.builtinPlugins = [
 	TableToolbar,
 	Base64UploadAdapter,
 	Code
+
 ];
 
 // Editor configuration.
