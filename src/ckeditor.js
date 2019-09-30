@@ -7,6 +7,7 @@
 import DecoupledEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decouplededitor';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
@@ -67,8 +68,8 @@ DecoupledEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	Code
-
+	Code,
+	FontColor
 ];
 
 // Editor configuration.
@@ -77,8 +78,10 @@ DecoupledEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
-			'fontsize',
-			'fontfamily',
+			'fontSize',
+			'fontFamily',
+			'fontColor',
+			'fontBackgroundColor',
 			'|',
 			'bold',
 			'italic',
