@@ -27,7 +27,7 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
-import LineHeight from 'ckeditor5-line-height-plugin';
+// import LineHeight from 'ckeditor5-line-height-plugin';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
@@ -67,7 +67,7 @@ DecoupledEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	Code,
-	LineHeight
+	// LineHeight
 ];
 
 // Editor configuration.
@@ -138,9 +138,9 @@ DecoupledEditor.defaultConfig = {
 			{ model: 'heading4', view: 'h4', title: 'Heading 3', class: 'ck-heading_heading4' }
 		]
 	},
-	lineHeight: {
-		options: [ 0.5, 1, 1.5, 2, 2.5 ]
-	},
+	// lineHeight: {
+	// 	options: [ 0.5, 1, 1.5, 2, 2.5 ]
+	// },
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'fr'
+	language: 'en'
 };
