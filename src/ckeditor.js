@@ -7,9 +7,7 @@
 import DecoupledEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decouplededitor';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
-import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
-import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
-import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
@@ -29,6 +27,7 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
+import LineHeight from 'ckeditor5-line-height-plugin';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
@@ -42,8 +41,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {}
 DecoupledEditor.builtinPlugins = [
 	Essentials,
 	Alignment,
-	FontSize,
-	FontFamily,
+	Font,
 	Highlight,
 	UploadAdapter,
 	Autoformat,
@@ -68,8 +66,11 @@ DecoupledEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	Code,
-	FontColor
+	Code
+];
+
+DecoupledEditor.plugins = [
+	LineHeight
 ];
 
 // Editor configuration.
@@ -88,6 +89,7 @@ DecoupledEditor.defaultConfig = {
 			'underline',
 			'strikethrough',
 			'highlight',
+			'lineHeight',
 			'|',
 			'alignment',
 			'|',
@@ -138,6 +140,9 @@ DecoupledEditor.defaultConfig = {
 			{ model: 'heading3', view: 'h3', title: 'Heading 2', class: 'ck-heading_heading3' },
 			{ model: 'heading4', view: 'h4', title: 'Heading 3', class: 'ck-heading_heading4' }
 		]
+	},
+	lineHeight: {
+		options: [ 0.5, 1, 1.5, 2, 2.5 ]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'fr'
