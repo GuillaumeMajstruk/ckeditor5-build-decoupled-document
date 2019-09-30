@@ -66,10 +66,7 @@ DecoupledEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	Code
-];
-
-DecoupledEditor.plugins = [
+	Code,
 	LineHeight
 ];
 
