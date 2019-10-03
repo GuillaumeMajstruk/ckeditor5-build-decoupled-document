@@ -33,7 +33,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
-// import PreElement from "ckeditor5-code-block/src/pre";
+import Indent from '@ckeditor/ckeditor5-indent/src/indent';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -66,7 +67,9 @@ DecoupledEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	Code
+	Code,
+	Indent,
+	IndentBlock
 ];
 
 // Editor configuration.
@@ -85,9 +88,11 @@ DecoupledEditor.defaultConfig = {
 			'underline',
 			'strikethrough',
 			'highlight',
-			'lineHeight',
 			'|',
 			'alignment',
+			'|',
+			'outdent',
+			'indent',
 			'|',
 			'numberedList',
 			'bulletedList',
@@ -103,6 +108,10 @@ DecoupledEditor.defaultConfig = {
 			'|',
 			'code'
 		]
+	},
+	indentBlock: {
+		offset: 1,
+		unit: 'em'
 	},
 	image: {
 		styles: [
