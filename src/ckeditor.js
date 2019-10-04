@@ -35,6 +35,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -69,7 +70,8 @@ DecoupledEditor.builtinPlugins = [
 	TableToolbar,
 	Code,
 	Indent,
-	IndentBlock
+	IndentBlock,
+	Autosave
 ];
 
 // Editor configuration.
